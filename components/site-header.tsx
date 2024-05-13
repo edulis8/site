@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { buttonVariants } from './ui/button';
 import { Icons } from './icons';
 import { MainNav } from './main-nav';
+import { MobileNav } from './mobile-nav';
 
 // is a server component
 export function SiteHeader() {
@@ -23,7 +24,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: 'ghost' }),
-                  'w-10 px-0',
+                  'w-10 px-0 hidden sm:inline-flex',
                 )}
               >
                 <Icons.GitHub className="h-4 w-4" />
@@ -39,7 +40,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: 'ghost' }),
-                  'w-10 px-0',
+                  'w-10 px-0 hidden sm:inline-flex',
                 )}
               >
                 <Icons.Twitter className="h-4 w-4" />
@@ -55,13 +56,14 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: 'ghost' }),
-                  'w-10 px-0',
+                  'w-10 px-0 hidden sm:inline-flex',
                 )}
               >
                 <Icons.LinkedIn className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </div>
             </Link>
+            <MobileNav />
           </nav>
         </div>
       </div>
