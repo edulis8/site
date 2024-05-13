@@ -5,8 +5,11 @@ Eric Broberg's website.
 
 
 
-
-
+FEATURING: 
+- [pnpm](https://pnpm.io/)
+- [shadcn/ui](https://github.com/shadcn/ui)
+- [velite](https://github.com/velitejs/velite)
+- svg icons
 
 
 
