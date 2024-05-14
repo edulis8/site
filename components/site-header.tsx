@@ -5,6 +5,7 @@ import { buttonVariants } from './ui/button';
 import { Icons } from './icons';
 import { MainNav } from './main-nav';
 import { MobileNav } from './mobile-nav';
+import { ModeToggle } from './ui/mode-toggle';
 
 // is a server component
 export function SiteHeader() {
@@ -63,6 +64,7 @@ export function SiteHeader() {
                 <span className="sr-only">LinkedIn</span>
               </div>
             </Link>
+            <ModeToggle />
             <MobileNav />
           </nav>
         </div>

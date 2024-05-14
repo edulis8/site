@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { SiteHeader } from '@/components/site-header';
+import { Providers } from '@/components/providers';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -27,12 +28,14 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        {/* min-h-screen vs min-h-dvh (displayed viewport height). need dvh for pages exact height of screen */}
-        <div className="relative flex min-h-dvh flex-col bg-background">
-          {/* flex-1: main content grows to fill space of page */}
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-        </div>
+        <Providers>
+          {/* min-h-screen vs min-h-dvh (displayed viewport height). need dvh for pages exact height of screen */}
+          <div className="relative flex min-h-dvh flex-col bg-background">
+            {/* flex-1: main content grows to fill space of page */}
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );
