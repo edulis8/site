@@ -42,7 +42,7 @@ export const Icons = {
   LinkedIn: (props: IconProps) => (
     <svg
       {...props}
-      fill="#000000"
+      fill="currentColor"
       height="200px"
       width="200px"
       version="1.1"

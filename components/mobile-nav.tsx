@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link, { LinkProps } from 'next/link';
-import { useRouter } from 'next/navigation';
-import { siteConfig } from '@/config/site';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
-import { Button } from './ui/button';
-import { Icons } from './icons';
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Button } from "./ui/button";
+import { Menu } from "lucide-react";
+import Link, { LinkProps } from "next/link";
+import { useRouter } from "next/navigation";
+import { Icons } from "./icons";
+import { siteConfig } from "@/config/site";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ export function MobileNav() {
           href="/"
           className="flex items-center"
         >
-          <Icons.Logo className="mr-2 w-4" />
+          <Icons.Logo className="mr-2 h-4 w-4" />
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <div className="flex flex-col gap-3 mt-3">
@@ -36,8 +36,15 @@ export function MobileNav() {
           <MobileLink onOpenChange={setOpen} href="/about">
             About
           </MobileLink>
-          <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+          <Link target="_blank" rel="noreferrer" href={siteConfig.links.github}>
             GitHub
+          </Link>
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href={siteConfig.links.twitter}
+          >
+            Twitter
           </Link>
           <Link
             href={siteConfig.links.linkedin}
@@ -56,25 +63,24 @@ interface MobileLinkProps extends LinkProps {
   children: React.ReactNode;
   onOpenChange?: (open: boolean) => void;
   className?: string;
-  href: string;
 }
 
 function MobileLink({
   href,
-  className,
   onOpenChange,
   children,
+  className,
   ...props
 }: MobileLinkProps) {
   const router = useRouter();
   return (
     <Link
-      href={href} // Add type annotation to href parameter
-      className={className}
+      href={href}
       onClick={() => {
-        router.push(href.toString()); // Ensure href is of type string before calling .toString()
-        onOpenChange?.(false); // Add type annotation to onOpenChange parameter
+        router.push(href.toString());
+        onOpenChange?.(false);
       }}
+      className={className}
       {...props}
     >
       {children}
