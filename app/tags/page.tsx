@@ -5,7 +5,7 @@ import { Tag } from "@/components/tag";
 
 export const metadata: Metadata = {
   title: "Tags",
-  description: "Topic I've written about",
+  description: "Blog topics I've written about",
 };
 
 export default async function TagsPage() {

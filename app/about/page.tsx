@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Me",
-  description: "Information about me",
+  description: "About Eric Broberg, Software Engineer",
 };
 
 export default async function AboutPage() {
@@ -21,14 +21,22 @@ export default async function AboutPage() {
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
         <div className="min-w-48 max-w-48 flex flex-col gap-2">
           <Avatar className="h-48 w-48">
-            <AvatarImage src="/eb_plant_avatar.png" alt={siteConfig.author} />
+            <AvatarImage src="/eb_avatar_classic_bw.JPG" alt={siteConfig.author} />
             <AvatarFallback>EB</AvatarFallback>
           </Avatar>
+          {/* <Avatar className="h-48 w-48">
+            <AvatarImage src="/palms_bw.JPG" alt={siteConfig.author} />
+            <AvatarFallback>EB</AvatarFallback>
+          </Avatar>  */}
+          {/* <Avatar className="h-48 w-48">
+            <AvatarImage src="/palms_color.JPG" alt={siteConfig.author} />
+            <AvatarFallback>EB</AvatarFallback>
+          </Avatar> */}
           <h2 className="text-2xl font-bold text-center break-words">
             {siteConfig.author}
           </h2>
           <p className="text-muted-foreground text-center break-words">
-            Software Developer
+            Software Engineer [Frontend, Full Stack]
           </p>
         </div>
         <p className="text-muted-foreground text-lg py-4">
