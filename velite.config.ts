@@ -37,6 +37,7 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug,
+      // TODO: tryother themes - https://rehype-pretty.pages.dev/
       [rehypePrettyCode, { theme: "github-dark" }],
       [
         rehypeAutolinkHeadings,

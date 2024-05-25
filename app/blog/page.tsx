@@ -24,6 +24,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const sortedPosts = sortPosts(posts.filter((post) => post.published));
   const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
 
+  // blog posts displayed will be 0-5, 5-10, 10-15, etc
   const displayPosts = sortedPosts.slice(
     POSTS_PER_PAGE * (currentPage - 1),
     POSTS_PER_PAGE * currentPage

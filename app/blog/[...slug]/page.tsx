@@ -13,7 +13,9 @@ interface PostPageProps {
 }
 
 async function getPostFromParams(params: PostPageProps["params"]) {
+  // join nested slashes
   const slug = params?.slug?.join("/");
+  // slugAsParams was set up to cut off /blog/
   const post = posts.find((post) => post.slugAsParams === slug);
 
   return post;
@@ -58,6 +60,8 @@ export async function generateMetadata({
   };
 }
 
+// The generateStaticParams function can be used in combination with dynamic route segments to statically generate routes 
+// at build time instead of on-demand at request time.
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
@@ -72,6 +76,8 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
+    // prose class is from tailwind typography
+    // https://github.com/tailwindlabs/tailwindcss-typography
     <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
       <h1 className="mb-2">{post.title}</h1>
       <div className="flex gap-2 mb-2">

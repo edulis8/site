@@ -5,6 +5,7 @@ import { posts } from "#site/content";
 import Link from "next/link";
 import { PostItem } from "@/components/post-item";
 
+// HOME PAGE
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
   return (
@@ -28,6 +29,7 @@ export default function Home() {
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
+              // TODO see shad cn for more button variant options
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "w-full sm:w-fit"
