@@ -5,6 +5,12 @@ import { posts } from "#site/content";
 import Link from "next/link";
 import { PostItem } from "@/components/post-item";
 
+// note for research:
+// https://realfavicongenerator.net
+// apple-icon.png is apple touch icon
+// favicon.png
+// icon.png 16 x 16
+// icon1.png 32 x 32
 // HOME PAGE
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);

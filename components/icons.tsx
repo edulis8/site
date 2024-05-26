@@ -1,22 +1,6 @@
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
-  Logo: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M4 11a9 9 0 0 1 9 9" />
-      <path d="M4 4a16 16 0 0 1 16 16" />
-      <circle cx="5" cy="19" r="1" />
-    </svg>
-  ),
   Twitter: (props: IconProps) => (
     <svg
       {...props}
@@ -70,5 +54,62 @@ export const Icons = {
         </g>
       </g>
     </svg>
+  ),
+  // Logo: (props: IconProps) => (
+  //   <svg
+  //     xmlns="http://www.w3.org/2000/svg"
+  //     viewBox="0 0 24 24"
+  //     fill="none"
+  //     stroke="currentColor"
+  //     strokeWidth="2"
+  //     strokeLinecap="round"
+  //     strokeLinejoin="round"
+  //     {...props}
+  //   >
+  //     <path d="M4 11a9 9 0 0 1 9 9" />
+  //     <path d="M4 4a16 16 0 0 1 16 16" />
+  //     <circle cx="5" cy="19" r="1" />
+  //   </svg>
+  // ),
+  Logo: (props: IconProps) => (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="svg-snoweb svg-theme-light"
+    viewBox="0 0 100 100"
+    {...props}
+  >
+    <defs>
+      <style>{".svg-fill-primary{fill:#090d49}"}</style>
+    </defs>
+    <clipPath id="clip-path-202405-2503-2442-29bc4333-1fa1-434f-b8d0-a5ace1e693a7">
+      <circle cx={50} cy={50} r={50} />
+    </clipPath>
+    <circle
+      cx={50}
+      cy={50}
+      r={50}
+      style={{
+        fill: "#e5e7eb",
+      }}
+    />
+    <circle
+      cx={50}
+      cy={50}
+      r={50}
+      className="svg-builder-circle"
+      style={{
+        fill: "#dae3e0",
+      }}
+    />
+    <path
+      d="M49.27 68.942a1.8 1.8 0 0 1-1.8-1.8V44.684a1.8 1.8 0 1 1 3.6 0v22.458a1.8 1.8 0 0 1-1.8 1.8Z"
+      className="svg-fill-primary"
+      opacity={0.9}
+    />
+    <path
+      d="M60.722 48.72c-2.61-.882-4.794-1.956-6.96-3.204 2.04 2.256 2.874 5.58 1.986 8.55-2.574-2.04-3.888-2.187-4.962-5.127-.336-.924-.426-1.49-.852-2.685l-.33-.758c-1.609 3.984-3.822 5.426-6.75 8.57-1.686-3.516.426-7.98 3.84-9.54-1.374.492-2.742.954-4.074 1.542-2.25.912-4.11 1.89-6.486 2.946.384-3.504 3.414-6.066 6.756-6.774-2.01-.39-3.984-.924-6.03-1.95 2.358-1.962 6.252-2.238 9.084-.858-1.182-1.752-1.956-3.708-2.112-6.036 2.184.474 4.158 2.178 5.226 4.26.636-2.718 2.364-5.208 4.884-6.306a17.735 17.735 0 0 1-.624 4.668 8.962 8.962 0 0 1 1.596-1.134c2.766-1.542 6.828-1.284 8.766 1.386-3.03.132-5.346.726-7.782 2.196-.072.042-.138.09-.21.132 3.36-.054 6.882 1.902 8.046 5.358-3.162-.798-5.784-1.782-8.892-1.878-.216 0-.432 0-.642.006 3.222.606 6.186 3.318 6.522 6.636Z"
+      className="svg-fill-primary"
+    />
+  </svg>
   ),
 };
