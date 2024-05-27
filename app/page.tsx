@@ -5,15 +5,16 @@ import { posts } from "#site/content";
 import Link from "next/link";
 import { PostItem } from "@/components/post-item";
 
-// note for research:
+// a favicon generator:
 // https://realfavicongenerator.net
+// note about different types of icons:
+// favicon.pn
 // apple-icon.png is apple touch icon
-// favicon.png
-// icon.png 16 x 16
-// icon1.png 32 x 32
+// icon.png is 16 x 16
+// icon1.png is 32 x 32
 // HOME PAGE
 export default function Home() {
-  const latestPosts = sortPosts(posts).slice(0, 5);
+  const latestPosts = sortPosts(posts).slice(0, 5).filter((post) => post.published);
   return (
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
