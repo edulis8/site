@@ -29,6 +29,9 @@ export default async function AboutPage() {
               <p>|</p>
               <a href="https://github.com/edulis8/DAG-workflow-runner" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Code</a>
           </div>
+          <div className="flex space-x-4"><p className="whitespace-nowrap">This Website:</p>
+              <a href="https://github.com/edulis8/site" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Code</a>
+          </div>
         </div>
       </div>
     </div>
