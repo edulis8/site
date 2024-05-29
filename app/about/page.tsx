@@ -40,8 +40,10 @@ export default async function AboutPage() {
           </p>
         </div>
         <p className="text-muted-foreground text-lg py-4">
-          👋 I'm Eric, software engineer. 
-          I'll write more about myself here later. 
+          👋 I'm Eric.<br/>
+
+          
+          I derive deep gratification from the design and creation of aesthetically pleasing, efficient systems.
         </p>
       </div>
     </div>
