@@ -36,6 +36,15 @@ export function MainNav() {
       >
         About
       </Link>
+      <Link
+        href="/projects"
+        className={cn(
+          'text-sm font-medium transition-colors hover:text-primary hidden sm:inline-flex',
+          pathname === '/projects' ? 'text-foreground' : 'text-foreground/60',
+        )}
+      >
+        Projects
+      </Link>
     </nav>
   );
 }
