@@ -69,8 +69,9 @@ export default async function AboutPage() {
             TDD.
           </p>
           <hr className="my-4" />
+          <h4 className="text-1xl font-bold text-left">And more words re: me...</h4>
           <p className="text-muted-foreground text-lg py-1 break-words">
-            I am a software engineer based near San Francisco (in Oakland, CA), well-versed in a
+            I'm a software engineer based near San Francisco (in Oakland, CA), well-versed in a
             myriad of frontend and backend languages and frameworks. I am
             well-versed in functional and object-oriented programming and keep
             current with the latest technologies. In my recent projects, I have
