@@ -72,14 +72,8 @@ export default async function AboutPage() {
           <h4 className="text-1xl font-bold text-left">And more words re: me...</h4>
           <p className="text-muted-foreground text-lg py-1 break-words">
             I'm a software engineer based near San Francisco (in Oakland, CA), well-versed in a
-            myriad of frontend and backend languages and frameworks. I am
-            well-versed in functional and object-oriented programming and keep
-            current with the latest technologies. In my recent projects, I have
-            been building with React or Angular (combined with both
-            Javascript/ES6 and Typescript) on the frontend, and Java, Node, or
-            PHP with RESTful APIs on the server side. On the database side, I
-            have experience with GraphQL, MongoDB, MySQL, MSSQL, CockroachDB,
-            and PostgreSQL.
+            myriad of frontend and backend languages and frameworks. I keep current with the latest technologies. In my recent projects, I have been building with React/Next/Typescript on the frontend, 
+            and Java or Node REST APIs on the server side. On the database side, I have experience with GraphQL, MongoDB, MySQL, MSSQL, CockroachDB, and PostgreSQL. 
             <br />
             <br />
             When I approach a new problem, I break it down into its component
