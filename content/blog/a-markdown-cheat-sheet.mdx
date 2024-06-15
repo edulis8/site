@@ -1,37 +1,37 @@
 ---
-title: Github Flavoured Markdown CheatSheet
-description: A markdown cheat sheet for GFM
-date: 2024-03-03
-published: false
+title: Markdown Cheat Sheet
+description: Just putting this here for my own reference, really
+date: 2024-06-13
+published: true
+tags: ["code", "tech"]
 ---
 
-# Introduction
+# What's Markdown?
 
-The following markdown cheatsheet is adapted from: https://guides.github.com/features/mastering-markdown/
+Markdown is a nice, quick and easy method to add style to web text. You have the power to customize a document's appearance. You can format words,
+incorporate images, generate lists, etc.
 
-# What is Markdown?
-
-Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like `#` or `*`.
+Essentially, Markdown consists of standard text combined with a small number of non-alphabetic symbols, like # or *, to achieve these formatting options.
 
 # Syntax guide
 
-Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.
+Below is a summary of Markdown syntax that we can use across github or in our personal text files.
 
 ## Headers
 
 ```mdx
-# This is a h1 tag
+# This is a header one
 
-## This is a h2 tag
+## This is a header two
 
-#### This is a h4 tag
+#### This is a header four
 ```
 
-# This is a h1 tag
+# This is a header one
 
-## This is a h2 tag
+## This is a header two
 
-#### This is a h4 tag
+#### This is a header four
 
 ## Emphasis
 
@@ -40,14 +40,14 @@ _This text will be italic_
 
 **This text will be bold**
 
-_You **can** combine them_
+_You **can totally** mix them up_
 ```
 
 _This text will be italic_
 
 **This text will be bold**
 
-_You **can** combine them_
+_You **can totally ** mix them up_
 
 ## Lists
 
@@ -84,55 +84,55 @@ _You **can** combine them_
 ## Images
 
 ```mdx
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![github logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 Format: ![Alt Text](url)
 ```
 
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![github logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
 ## Links
 
 ```mdx
 http://github.com - automatic!
-[GitHub](http://github.com)
+[github](http://github.com)
 ```
 
 http://github.com - automatic!
-[GitHub](http://github.com)
+[](http://github.com)
 
 ## Blockquotes
 
 ```mdx
-As Kanye West said:
+As Bill Mollison said:
 
-> We're living the future so
-> the present is our past.
+> Though the problems of the world are increasingly complex,
+> the solutions remain embarrassingly simple.
 ```
 
-As Kanye West said:
+As Bill Mollison said:
 
-> We're living the future so
-> the present is our past.
+> Though the problems of the world are increasingly complex,
+> the solutions remain embarrassingly simple.
 
 ## Inline code
 
 ```mdx
-I think you should use an
-`<addr>` element here instead.
+I think you should use 
+`<details>` element here instead.
 ```
 
-I think you should use an
-`<addr>` element here instead.
+I think you should use a
+`<details>` element here instead.
 
 ## Syntax highlighting
 
-Here’s an example of how you can use syntax highlighting with [GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
+Here’s an example of how you can use syntax highlighting:
 
 ````mdx
-```js:fancyAlert.js
-function fancyAlert(arg) {
+```js
+function helloWorld(arg) {
   if (arg) {
-    $.facebox({ div: '#foo' })
+    console.log({ arg, logo: 🌴 })
   }
 }
 ```
@@ -140,10 +140,10 @@ function fancyAlert(arg) {
 
 And here's how it looks - nicely colored with styled code titles!
 
-```jsx
-function fancyAlert(arg) {
+```js
+function helloWorld(arg) {
   if (arg) {
-    $.facebox({ div: "#foo" });
+    console.log({ arg, logo: 🌴 })
   }
 }
 ```
@@ -151,14 +151,18 @@ function fancyAlert(arg) {
 ## Footnotes
 
 ```mdx
-Here is a simple footnote[^1]. With some additional text after it.
+Here's a footnote[^1]. With some additional text after it. 
+And then another footnote[^2].
 
-[^1]: My reference.
+[^1]: My footnote.
+[^2]: My other footnote.
 ```
 
-Here is a simple footnote[^1]. With some additional text after it.
+Here's a footnote[^1]. With some additional text after it. 
+And then another footnote[^2].
 
-[^1]: My reference.
+[^1]: My footnote.
+[^2]: My other footnote.
 
 ## Task Lists
 
