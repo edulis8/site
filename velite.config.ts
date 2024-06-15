@@ -38,7 +38,7 @@ export default defineConfig({
     rehypePlugins: [
       rehypeSlug,
       // TODO: tryother themes - https://rehype-pretty.pages.dev/
-      [rehypePrettyCode, { theme: "github-dark" }],
+      [rehypePrettyCode, { theme: "material-theme-ocean" }],
       [
         rehypeAutolinkHeadings,
         {
