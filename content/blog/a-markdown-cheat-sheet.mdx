@@ -13,6 +13,10 @@ incorporate images, generate lists, etc.
 
 Essentially, Markdown consists of standard text combined with a small number of non-alphabetic symbols, like # or *, to achieve these formatting options.
 
+Taken from here.[^3] 
+
+[^3]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
 # Syntax guide
 
 Below is a summary of Markdown syntax that we can use across github or in our personal text files.
@@ -152,17 +156,17 @@ function helloWorld(arg) {
 
 ```mdx
 Here's a footnote[^1]. With some additional text after it. 
-And then another footnote[^2].
+And then another footnote[^2]. 
 
-[^1]: My footnote.
-[^2]: My other footnote.
+[^1]: My example footnote.
+[^2]: My other example footnote.
 ```
 
 Here's a footnote[^1]. With some additional text after it. 
 And then another footnote[^2].
 
-[^1]: My footnote.
-[^2]: My other footnote.
+[^1]: My example footnote.
+[^2]: My other example footnote.
 
 ## Task Lists
 
@@ -195,3 +199,41 @@ You can create tables by assembling a list of words and dividing them with hyphe
 ## Strikethrough
 
 Any word wrapped with two tildes (like `~~this~~`) will appear ~~crossed out~~.
+
+## Extras Cool Stuff You Can Do With Rehype
+
+From https://rehype-pretty.pages.dev/ -- this is rad:
+
+Line numbers and highlighting to draw attention to a particular line of code. This is straight from their page. Keeping it here for my own reference :)
+
+````mdx
+```js {4} showLineNumbers
+import { useFloating } from "@floating-ui/react";
+
+function MyComponent() {
+  const { refs, floatingStyles } = useFloating();
+
+  return (
+    <>
+      <div ref={refs.setReference} />
+      <div ref={refs.setFloating} style={floatingStyles} />
+    </>
+  );
+}
+```
+````
+
+```js {4} showLineNumbers
+import { useFloating } from "@floating-ui/react";
+
+function MyComponent() {
+  const { refs, floatingStyles } = useFloating();
+
+  return (
+    <>
+      <div ref={refs.setReference} />
+      <div ref={refs.setFloating} style={floatingStyles} />
+    </>
+  );
+}
+```
