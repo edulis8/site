@@ -97,12 +97,12 @@ export default async function AboutPage() {
             resulted in a 80% increase in efficiency over the old workflow.
             <br />
             <br />
-            More about me: Fluent in Spanish. Conversational in Portuguese. Once
+            Non-Technical Side: Fluent in Spanish. Conversational in Portuguese. Once
             took a course in bird language. Have traveled to 30 countries. Was a
             Peace Corps volunteer in the Dominican Republic. Started an organic
             rare subtropical fruit farm. Hobbies: photography, soccer,
             meditation, exploring hidden beaches and hot springs, being an
-            Airbnb host, and spending time with my seven year old daughter.
+            Airbnb host, and spending time with my daughter.
           </p>
         </div>
       </div>
