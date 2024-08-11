@@ -1,0 +1,110 @@
+---
+title: Coding Interview Flow
+description: a cheatsheet I printed out for reference during coding interviews
+date: 2024-08-10
+tags: ["job hunt", "interviews"]
+published: true
+---
+
+
+**Relax, Beginner’s Mind \- Don’t rush, don’t try to compare to problem I have seen\!**
+
+**FRONTEND INTERVIEWS:**  
+**Clarifying at beginning**
+
+* How important is styling/CSS or is core functionality the focus?  
+* Should I go with straightforward markup/scripting or built a re-usable component?  
+* Create two buckets: What are the **core** **requirements** for the time we have?  
+* What are the optimizations (if time allows), nice-to-haves, future features. (If no time to implement, briefly explain how you’d go about it.)
+
+**Pseudocoding / Skeletoning**
+
+* Verbalize your approach (eg “I’ll do the HTML first and add the interactivity later”)  
+* Write up comments on overall approach, step by step.  
+* Skeleton out some named functions or classes, add comments there.  
+* Focus on the hard part, potentially skip over rote work (interviewer may let you pretend you have a library func that handles it).
+
+**ALGORITHM INTERVIEWS:**  
+**Clarifying at beginning**
+
+- **Inputs**: what kind? How many?   
+- **Output**: what is it?  
+- **Constraints**: input constraints; time/space complexity constraints. Should we mutate the input, or not?  
+- **Edge cases:** Empty/null input? Unexpected values? How handle?  
+- **Repeat problem back to interviewer.**  
+- **Simplify input, if it is too complex.**
+
+**Steps**
+
+- **Brute force.** Pseudocode it. State time/space.  
+- **Identify choices explicitly**. Make time/space tradeoffs.   
+- **Optimize\*.** A DS or Algo. Pseudocode it. State time/space.  
+- **Check in: "Before I pursue this approach, is there anything I should consider or do you have any questions about it?"**  
+- **Walk through given example input.**  
+- **Implement.** Skeleton it out with named func/vars first. Prioritize harder parts.  
+- **Test / Dry Run.**  
+- **Time/Space Discussion if needed here at the end.**
+
+
+**Array Clarifying Questions**
+
+* If an array (or a range 0...n), is it ***sorted***? Or could we sort it? What does that mean?   
+  * Sorted: Pointers (1 or 2), or 1 pass?  
+  * Sorted: Binary Search possible  
+* Sliding window? Discard old, incorporate new. (strings too)  
+* Fixed sliding window? Variable sliding window? (strings too)
+
+**Permutations/Combinations/Sets:**
+
+* Get very clear on what we’re talking about.   
+* Perms: Order matters. Repeat allowed OR not allowed?  
+* Combos: Order doesn’t matter, repetition is not allowed.  
+* Sets: combos that are “bags” of ‘empty set’ up to max string/num length.  
+* Tree-like “problem space”  
+* Template: series of blanks (partial soln) and subprob passed to recursive ‘manager’ who does one thing. Base case: subprob size is 0\.
+
+**DP / Counting / with Memoization**
+
+* Counting combinations style problems. What are the options at each step? Are there two options (stairs, grid moves) or a list of them (coin change).   
+* Base Case returns 0 or 1\. Add up the count. Memoize for performance.
+
+**Tree Clarifying Questions**
+
+* What kind of tree, and what does that mean?  
+  * Binary Tree  
+  * Binary Search Tree \- lefts smaller than rights. Inorder \= sorted.  
+  * BST \- is it balanced?  
+  * N-ary Tree (Hierarchical Tree).  
+  * Tries \- n-ary. Each path represents a word, e.g. a dictionary.  
+* **Tree Approaches**  
+* **Traversal: BFS (levels matter), DFS**  
+* **N-ary tree traversal:** BFS or DFS but iterating over children (to q or DFS stack)  
+* **Top Down DFS \- can the result be passed up to global variable?**  
+* **Bottom Up DFS \- do we need info passed up to parents?**  
+* **Tree Construction: Top down,** (left to right is doable, never studied)  
+* Note: “A tree is an undirected connected acyclic graph.”
+
+**Graph Clarifying Questions**
+
+* Connected? Unconnected? (Do I eed to handle separate components?).  
+* Undirected (two-way edges) or directed (one-way edges).  
+* **Graph Approaches & Complexities:**  
+* How to model it? adjList, matrix, something else?  
+* … Tackle it with DFS, BFS (layers matter)… *or maybe something simpler.*  
+* *Or maybe something more complex (haven’t studied)*  
+* Directed Graphs: need arrival/dep **timestamps** for cycle detection.  
+* DAG \- directed acyclic graph, allows for TOPSORT (linear ordering of vertices from left to right)
+
+**\*Optimize**
+
+* **Decrease and conquer** \- transform prob into smaller prob I know the solution to.  
+* **Divide** **and** **conquer** \- e.g. binary search, quick select.  
+* **Transform and conquer** \- use a DS.  
+* **Greedy** \- Maximize local quantity leads to getting to the glob optimum.  
+* **Backtracking** \- incrementally building candidate solutions, then “backtracking” when it determines that a candidate violates a constraint.  
+* Backtracking \+ memoization: special case of top down DP.  
+* **Heaps** \- WHEN YOU WANT Kth SMALLEST, USE A MAXHEAP OF SIZE K, WHEN YOU WANT kth largest or K LARGEST, USE A MINHEAP OF SIZE K.  
+* **Linked Lists** \- are great for problems that require arbitrary insertion.   
+* **Doubly Linked Lists** \- you can insert or delete elements in a linked list in constant time, as long as you know where the element is.  
+* **Stacks** \- string stacks **Monotone Stacks** \- eg “find the closest larger/smaller element on the left/right of the curr one.
+
